@@ -1,0 +1,22 @@
+<section class="container">
+  <h3>
+    Selected Person
+  </h3>
+
+  <div class="selectedPerson">
+    <ul>
+      <li>
+        Name: {{selectedPerson?.name}}
+      </li>
+      <li>
+        Age: {{selectedPerson?.age}}
+      </li>
+    </ul>
+  </div>
+
+  <h3>
+    Count ({{people.length}})
+  </h3>
+  <app-person [person]="item" *ngFor="let item of people" (onSelected)="choose($event)" [ngClass]="{'.selectedPerson': true}">
+  </app-person>
+  </section>

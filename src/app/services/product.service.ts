@@ -39,10 +39,11 @@ export class ProductsService {
     return this.http.get<Product[]>(`${this.apiUrl}/products`, { params })
     .pipe(
       retry(3),
-      map(products => products.map(item => {
+      map(products => products.map((item, idx) => {
         return {
           ...item,
-          taxes: item.price > 0 ? .19 * item.price : 0
+          taxes: item.price > 0 ? .19 * item.price : 0,
+          images: item.images.map(() => `https://picsum.photos/200?random=${idx}`)
         }
       }))
     );
