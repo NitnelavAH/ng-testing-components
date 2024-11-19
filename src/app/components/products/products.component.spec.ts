@@ -8,7 +8,7 @@ import { defer, of } from 'rxjs';
 import { By } from '@angular/platform-browser';
 import { ValueService } from 'src/app/services/value.service';
 
-fdescribe('ProductsComponent', () => {
+describe('ProductsComponent', () => {
   let component: ProductsComponent;
   let fixture: ComponentFixture<ProductsComponent>;
   let productService: jasmine.SpyObj<ProductsService>;

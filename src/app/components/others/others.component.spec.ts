@@ -1,20 +1,21 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PicoPreviewComponent } from './pico-preview.component';
+import { OthersComponent } from './others.component';
+import { ReversePipe } from 'src/app/pipes/reverse.pipe';
 
-describe('PicoPreviewComponent', () => {
-  let component: PicoPreviewComponent;
-  let fixture: ComponentFixture<PicoPreviewComponent>;
+describe('OthersComponent', () => {
+  let component: OthersComponent;
+  let fixture: ComponentFixture<OthersComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ PicoPreviewComponent ]
+      declarations: [ OthersComponent, ReversePipe ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(PicoPreviewComponent);
+    fixture = TestBed.createComponent(OthersComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
